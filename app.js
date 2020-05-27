@@ -1,3 +1,5 @@
+const path = require('path');
+const cors = require('cors');
 const express = require('express');
 const app = express();
 app.listen(3007, () => console.log('大事件接口'));

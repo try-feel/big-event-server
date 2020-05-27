@@ -6,9 +6,8 @@ module.exports = (sql,params = null) => {
         password: '0000',
         database: 'bigevent'
     });
-   
+    conn.connect();
     return new Promise((resolve,reject)=> {
-        conn.connect();
         conn.query(sql,params,(err,result) => {
             err ? reject(err):resolve(result);
         });
