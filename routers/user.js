@@ -59,7 +59,7 @@ router.post('/updatepwd',async (req, res) => {
 
 //  更换头像接口
 router.post('/update/avatar',async (req,res) => {
-    let r = await db('updata user set user_pic=? where id=?',[req.body.avatar, req.user.id])
+    let r = await db('update user set user_pic=? where id=?',[req.body.avatar, req.user.id])
     if (r && r.affectedRows>0) {
         res.send({status:0,message:'更换头像成功'});
     } else {
