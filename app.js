@@ -3,7 +3,7 @@ const cors = require('cors');
 const express = require('express');
 const jwt = require('express-JWT');
 const app = express();
-app.listen(3007, () => console.log('大事件接口'));
+app.listen(3007, () => console.log('接口启动'));
 
 // --------------配置应用级别的中间件-------------------
 app.use(cors());
@@ -38,4 +38,4 @@ app.use(function (err, req, res, next) {
             message: '身份认证失败!'
         });
     }
-})
+});
